@@ -33,13 +33,9 @@ def download(x1, x2, y1, y2,   window,  data_folder, width = 512, height = 512, 
     time.sleep(5)
 
     
-    if not wms_img: # Image extraction Failed.
-        return False
-    else:
-        return True            # Image succesfully extracted.
 
     #turn tiffs into jpegs
-    files = os.listdir(data_folder)
+    files = [ os.path.join(data_folder,file) for file in os.listdir(data_folder)]
     for file in files:
         with rasterio.open(file) as im:
             r = im.read(range(2,5))
@@ -50,3 +46,8 @@ def download(x1, x2, y1, y2,   window,  data_folder, width = 512, height = 512, 
         r = r * 255
         imwrite(file.replace('.tiff','.jpg'), r)
         os.remove(file)
+        
+    if not wms_img: # Image extraction Failed.
+        return False
+    else:
+        return True            # Image succesfully extracted.
