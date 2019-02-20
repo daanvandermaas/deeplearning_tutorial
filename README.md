@@ -17,3 +17,9 @@ Om dit te doen kun je gebruiken
 2 De code in de building blocks map om een pipeline te maken.
 3 De data in de clouds folder (downloadbaar hierboven)
 4 De provincie grenzen shape (downloadbaar hierboven)
+
+Je kunt een semi-getrained model hier downloaden:
+https://daanvandermaas.stackstorage.com/s/RlBesdhMpF9p6QB
+
+Je kunt hier de plaatjes van Sentinel2 downloaden
+https://daanvandermaas.stackstorage.com/s/IVxEHcz4ofJnw2C
